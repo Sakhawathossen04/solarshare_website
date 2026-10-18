@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>যেভাবে কাজ করে — SolarShare BD</title>
+  <meta name="description" content="স্মার্ট মিটার ডেটা থেকে সেটেলমেন্ট — SolarShare BD কীভাবে কমিউনিটি সোলার শেয়ারিং করে তার ধাপে ধাপে ব্যাখ্যা।" />
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">
+        <img src="../assets/img/logo.svg" alt="SolarShare BD logo" />
+        <span class="brand-name">SolarShare BD<small data-i18n="brandSub">কমিউনিটি এনার্জি</small></span>
+      </a>
+      <nav class="main-nav">
+        <a href="../index.html" data-i18n="navHome">হোম</a>
+        <a href="index.html" class="active" data-i18n="navHow">যেভাবে কাজ করে</a>
+        <a href="../app/index.html" data-i18n="navApp">অ্যাপ</a>
+        <a href="../pricing/index.html" data-i18n="navPricing">ট্যারিফ</a>
+        <a href="../faq/index.html" data-i18n="navFaq">প্রশ্নোত্তর</a>
+        <a href="../contact/index.html" data-i18n="navContact">যোগাযোগ</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="bn" class="active">বাংলা</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero gridlines">
+    <div class="container">
+      <div>
+        <span class="eyebrow">HOW IT WORKS</span>
+        <h1>মিটার থেকে টাকা — পুরো ফ্লো</h1>
+        <p class="lead">
+          SolarShare কোনো বিদ্যুতের physical path নিয়ন্ত্রণ করে না। আমরা মিটার ডেটা নিয়ে
+          ভ্যালিডেশন, মিলান, বিলিং আর সেটেলমেন্ট করি — নিয়ম ও অডিট মেনে।
+        </p>
+      </div>
+      <aside class="energy-panel">
+        <h3>এক ঝলকে</h3>
+        <p class="price-note">প্রতি ঘণ্টায় ৩ ধাপ চলে — প্রতিটা অডিট-লগড।</p>
+        <div class="price-row" style="grid-template-columns:1fr 1fr">
+          <div class="price-cell"><div class="t">Ingest</div><div class="v">Hourly</div></div>
+          <div class="price-cell"><div class="t">Validate</div><div class="v">Signed</div></div>
+          <div class="price-cell"><div class="t">Match</div><div class="v">Area+Time</div></div>
+          <div class="price-cell"><div class="t">Settle</div><div class="v">৳11/৳9/৳1</div></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block alt" id="steps">
+    <div class="container narrow">
+      <div class="block-head">
+        <span class="eyebrow">THE PIPELINE</span>
+        <h2>৫টি ধাপ, বিস্তারিত</h2>
+      </div>
+      <div class="card" style="margin-bottom:16px">
+        <h3>১. মিটার ডেটা ইনজেশন</h3>
+        <p>
+          Solar generation meter + bidirectional utility meter থেকে ঘণ্টাভিত্তিক রিডিং:
+          কত kWh নিলাম, কত পাঠালাম, কত নিজে ব্যবহার করলাম। ESP32/gateway ডেটা পাঠায়
+          MQTT/HTTPS-এ; নেটওয়ার্ক ফেইল হলে বাফার করে পরে পাঠায়।
+        </p>
+      </div>
+      <div class="card" style="margin-bottom:16px">
+        <h3>২. ভ্যালিডেশন ও সেফগার্ড</h3>
+        <p>
+          টাইমস্ট্যাম্প যাচাই, ডুপ্লিকেট রিডিং বাতিল, মিটার টেম্পার এলার্ট, অফলাইন ডিটেকশন।
+          Data হারালে ভুল করে producer-এর আয় বা consumer-এর বিল কখনো বদলায় না।
+        </p>
+      </div>
+      <div class="card" style="margin-bottom:16px">
+        <h3>৩. লোকাল মিলান (Matching)</h3>
+        <p>
+          একই distribution area-তে একই সময়ে generation আর চাহিদা মিলিয়ে দেখা হয় কতটুকু
+          surplus সত্যিই "eligible"। ৬২% local match ratio পাইলটে প্রমাণিত (simulated)।
+        </p>
+      </div>
+      <div class="card" style="margin-bottom:16px">
+        <h3>৪. বিলিং ও সেটেলমেন্ট</h3>
+        <p>
+          গ্রাহক দেয় ৳১১/kWh, উৎপাদক পায় ৳৯/kWh, অন্যান্য খরচ (network, fees) ৳১/kWh
+          আলাদা রেকর্ড হয়। বাকি পরিমাণ profit নয় — taxes/utility cost এখনো বাদ যায়নি।
+        </p>
+      </div>
+      <div class="card">
+        <h3>৫. অ্যাপে ফল দেখা</h3>
+        <p>
+          Producer-এর আয়, consumer-এর সাশ্রয়, মাসিক স্টেটমেন্ট — সব অ্যাপে।
+          অ্যাডমিন প্যানেলে রিকনসিলিয়েশন রিপোর্ট আর অডিট ট্রেইল।
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="community">
+    <div class="container split">
+      <div class="split-txt">
+        <span class="eyebrow">COMMUNITY MODEL</span>
+        <h2>কমিউনিটি কীভাবে দাঁড়ায়</h2>
+        <p>
+          ছাদ সবার কাছে নেই — কিন্তু সূর্য সবার। Producer-দের surplus consumer-দের
+          ব্যবহারের সাথে মিলে যায়, সবাই মিলে এক feeder-এ শেয়ার করা সবুজ বিদ্যুতের
+          হিসাব স্পষ্ট হয়।
+        </p>
+        <ul class="feature-list">
+          <li>১০ producer + ২০ consumer দিয়ে সিমুলেটেড পাইলট</li>
+          <li>মেঘলা দিন, মিটার ফেইলিওর, গ্রিড কনস্ট্রেইন টেস্ট</li>
+          <li>Baseline-এর তুলনায় সাশ্রয়/আয় পরিমাপ</li>
+        </ul>
+      </div>
+      <div class="split-media">
+        <div class="phone">
+          <div class="notch"></div>
+          <div class="scr">
+            <div class="p-tile mint"><b>Dhanmondi</b>Gen 128.4 kWh</div>
+            <div class="p-tile line"><b>Uttara</b>Gen 94.7 kWh</div>
+            <div class="p-tile line"><b>Agrabad</b>Gen 71.9 kWh</div>
+            <div class="p-bars">
+              <i style="height:52%"></i>
+              <i style="height:78%"></i>
+              <i style="height:64%"></i>
+              <i style="height:90%"></i>
+              <i style="height:58%"></i>
+              <i style="height:44%"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h2>নিজে দেখুন — ডেমো ফ্রি</h2>
+          <p>Producer, consumer কিংবা admin — তিন ভিউই সাথে সাথে।</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-amber" href="../app/index.html">অ্যাপ ডাউনলোড</a>
+          <a class="btn btn-ghost" href="../pricing/index.html">ট্যারিফ দেখুন</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="cols">
+        <div class="footer-brand">
+          <img src="../assets/img/logo-white.svg" alt="SolarShare BD" />
+          <p>SolarShare BD — বাংলাদেশের কমিউনিটি সোলার ট্রেডিং নেটওয়ার্ক (prototype)।</p>
+        </div>
+        <div><h4>Energy</h4>
+          <a href="../pricing/index.html">Tariffs</a>
+          <a href="index.html">How it works</a>
+          <a href="../faq/index.html">FAQ</a>
+        </div>
+        <div><h4>Direct</h4>
+          <a href="../app/index.html">App</a>
+          <a href="../contact/index.html">Contact</a>
+        </div>
+        <div><h4>Safety</h4>
+          <a href="../faq/index.html#safety">Meter safety</a>
+          <a href="../contact/index.html">Support</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 SolarShare BD</span>
+        <span>Demo prototype — no real energy trading</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

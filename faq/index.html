@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>প্রশ্নোত্তর — SolarShare BD</title>
+  <meta name="description" content="SolarShare BD সম্পর্কে সাধারণ প্রশ্ন: ট্রেডিং, মিটার নিরাপত্তা, সেটেলমেন্ট, নিয়ন্ত্রণ।" />
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">
+        <img src="../assets/img/logo.svg" alt="SolarShare BD logo" />
+        <span class="brand-name">SolarShare BD<small data-i18n="brandSub">কমিউনিটি এনার্জি</small></span>
+      </a>
+      <nav class="main-nav">
+        <a href="../index.html" data-i18n="navHome">হোম</a>
+        <a href="../how-it-works/index.html" data-i18n="navHow">যেভাবে কাজ করে</a>
+        <a href="../app/index.html" data-i18n="navApp">অ্যাপ</a>
+        <a href="../pricing/index.html" data-i18n="navPricing">ট্যারিফ</a>
+        <a href="index.html" class="active" data-i18n="navFaq">প্রশ্নোত্তর</a>
+        <a href="../contact/index.html" data-i18n="navContact">যোগাযোগ</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="bn" class="active">বাংলা</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero gridlines">
+    <div class="container">
+      <div>
+        <span class="eyebrow">FAQ</span>
+        <h1>যা সবাই জানতে চায়</h1>
+        <p class="lead">
+          ট্রেডিং দিয়ে শুরু করে মিটার নিরাপত্তা — সব কমন প্রশ্নের উত্তর এক জায়গায়।
+          আরও কিছু জানার থাকলে যোগাযোগ করুন।
+        </p>
+      </div>
+      <aside class="energy-panel">
+        <h3>আজকের মনে রাখার মতো</h3>
+        <div class="price-row" style="grid-template-columns:1fr">
+          <div class="price-cell"><div class="t">কোনো মিটার বাইপাস নেই</div><div class="v">০ অননুমোদিত কানেকশন</div></div>
+          <div class="price-cell"><div class="t">সব ডেটা</div><div class="v">ভ্যালিডেটেড</div></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="container narrow">
+      <div class="block-head">
+        <span class="eyebrow">ENERGY TRADING</span>
+        <h2>ট্রেডিং ও সেটেলমেন্ট</h2>
+      </div>
+      <details class="faq-item" open>
+        <summary>সোলার ট্রেডিং কীভাবে কাজ করে?</summary>
+        <div class="faq-body">
+          আপনার রুফটপ সোলারের অতিরিক্ত বিদ্যুৎ (surplus) মিটারে রেকর্ড হয়। আমাদের প্ল্যাটফর্ম
+          সেই surplus এলাকার গ্রাহকদের চাহিদার সাথে মিলিয়ে সেটেলমেন্ট করে — উৎপাদক ৳৯/kWh পান,
+          গ্রাহক ৳১১/kWh দেন, ৳১/kWh অন্যান্য খরচ আলাদা রেকর্ড হয়।
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>এটা কি নেট মিটারিংয়ের জায়গা নেয়?</summary>
+        <div class="faq-body">
+          না, বরং এর ওপরে উঠে দাঁড়ায়। Net Metering-এ surplus গ্রিডে যায়, আমরা শুধু সেই একই
+          রিডিং নিয়ে কমিউনিটি হিসাব আরও পরিষ্কার করি। সব কিছু বিদ্যমান নিয়ন্ত্রণের সাপেক্ষে।
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>দাম কি বদলায়?</summary>
+        <div class="faq-body">
+          প্রোটোটাইপে দাম fixed — ৳৯/৳১১। ফুল প্ল্যাটফর্মে market-driven রেট যোগ হওয়ার
+          প্ল্যান আছে, তখন সব বদল অ্যাপে ট্রান্সপারেন্টলি দেখা যাবে।
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>টাকা কিভাবে পাব?</summary>
+        <div class="faq-body">
+          মাসিক স্টেটমেন্টে নিজের নামে credit দেখাবে। বাস্তব payment gateways যোগ হবে
+          অনুমোদিত arrangement-এর পরে — প্রোটোটাইপে simulated ব্যালেন্স।
+        </div>
+      </details>
+
+      <div class="block-head" id="safety" style="margin-top:44px">
+        <span class="eyebrow">SAFETY &amp; CONTROL</span>
+        <h2>মিটার ও নিয়ন্ত্রণ</h2>
+      </div>
+      <details class="faq-item" open>
+        <summary>আমি কি নিজে meters সংযোগ করব?</summary>
+        <div class="faq-body">
+          কখনোই না। মিটার ইনস্টল ও বৈদ্যুতিক কাজ করবেন যোগ্য ইঞ্জিনিয়ার এবং অনুমোদিত
+          ইনস্টলার। আমরা শুধু meter data gateway — ESP32-এর মতো একটা অংশ — যা approved
+          meter থেকে data সংগ্রহ করে।
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>আমার মিটার tamper হলে কী হবে?</summary>
+        <div class="faq-body">
+          মিটার টেম্পার হলে আমার সিস্টেম এলার্ট ট্রিগার হয় (admin panel-এ warning/critical)।
+          টেম্পার থাকাকালীন কোনো settlement হিসাব হয় না।
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>নেটওয়ার্ক ফেইল হলে কী হয়?</summary>
+        <div class="faq-body">
+          Gateway রিডিং লোকালি বাফার করে, কানেকশন ফিরলে টাইমস্ট্যাম্পসহ পাঠায়। ডুপ্লিকেট
+          আর নন-কনসেকিউটিভ ইন্টার্ভাল বাতিল হয়, যেন ভুল বিলিং না হয়।
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>আমার ডেটা কোথায় যায়?</summary>
+        <div class="faq-body">
+          ডেটা আপনার অ্যাকাউন্ট ও area statistics-এ ব্যবহার হয়। এই প্রোটোটাইপে কোনো থার্ড পার্টি
+          tracking নেই। ফুল রিলিজে privacy governance আলাদা ডকুমেন্ট অনুযায়ী হবে।
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h2>আরও জানতে চান?</h2>
+          <p>ইমেইল বা ফোনে সরাসরি উত্তর পাবেন।</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-amber" href="../contact/index.html">যোগাযোগ করুন</a>
+          <a class="btn btn-ghost" href="../app/index.html">অ্যাপ ডাউনলোড</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="cols">
+        <div class="footer-brand">
+          <img src="../assets/img/logo-white.svg" alt="SolarShare BD" />
+          <p>SolarShare BD — বাংলাদেশের কমিউনিটি সোলার ট্রেডিং নেটওয়ার্ক (prototype)।</p>
+        </div>
+        <div><h4>Energy</h4>
+          <a href="../pricing/index.html">Tariffs</a>
+          <a href="../how-it-works/index.html">How it works</a>
+          <a href="index.html">FAQ</a>
+        </div>
+        <div><h4>Direct</h4>
+          <a href="../app/index.html">App</a>
+          <a href="../contact/index.html">Contact</a>
+        </div>
+        <div><h4>Safety</h4>
+          <a href="#safety">Meter safety</a>
+          <a href="../contact/index.html">Support</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 SolarShare BD</span>
+        <span>Demo prototype — no real energy trading</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

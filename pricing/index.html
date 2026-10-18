@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ট্যারিফ — SolarShare BD</title>
+  <meta name="description" content="SolarShare BD ট্যারিফ: গ্রাহক ৳১১/kWh, উৎপাদক ৳৯/kWh, অন্যান্য খরচ ৳১/kWh — সম্পূর্ণ ব্রেকডাউন সহ।" />
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">
+        <img src="../assets/img/logo.svg" alt="SolarShare BD logo" />
+        <span class="brand-name">SolarShare BD<small data-i18n="brandSub">কমিউনিটি এনার্জি</small></span>
+      </a>
+      <nav class="main-nav">
+        <a href="../index.html" data-i18n="navHome">হোম</a>
+        <a href="../how-it-works/index.html" data-i18n="navHow">যেভাবে কাজ করে</a>
+        <a href="../app/index.html" data-i18n="navApp">অ্যাপ</a>
+        <a href="index.html" class="active" data-i18n="navPricing">ট্যারিফ</a>
+        <a href="../faq/index.html" data-i18n="navFaq">প্রশ্নোত্তর</a>
+        <a href="../contact/index.html" data-i18n="navContact">যোগাযোগ</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="bn" class="active">বাংলা</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero gridlines">
+    <div class="container">
+      <div>
+        <span class="eyebrow">PRICING</span>
+        <h1>টাকার হিসাব একদম খোলা</h1>
+        <p class="lead">
+          Illustrative prototype rates — official tariff নয়। সব সংখ্যা ডেমো সিমুলেশনের,
+          সব খরচ আলাদা করে দেখানো হয়।
+        </p>
+        <div class="hero-cta"><span class="sim-note">⚠ SIMULATED — not an official Bangladesh tariff</span></div>
+      </div>
+      <aside class="energy-panel">
+        <h3>550 kWh সেটেল করলে</h3>
+        <div class="price-now" style="margin-top:6px"><small>৳</small><span>550</span><small>সংগ্রহ</small></div>
+        <p class="price-note">নিচের টেবিলে পুরো ভাঙানো আছে ↓</p>
+        <div class="price-row" style="grid-template-columns:1fr 1fr">
+          <div class="price-cell"><div class="t">Producer gets</div><div class="v">৳4,950*</div></div>
+          <div class="price-cell"><div class="t">Other costs</div><div class="v">৳550</div></div>
+          <div class="price-cell cheap"><div class="t">Collection</div><div class="v">৳6,050</div></div>
+          <div class="price-cell dear"><div class="t">Remaining</div><div class="v">৳550</div></div>
+        </div>
+        <p class="price-note" style="margin-top:10px">*ভবিষ্যতের cycle-এ। বাকি পরিমাণ profit নয় — taxes/utility cost এখনো বাদ যায়নি।</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="container">
+      <div class="block-head">
+        <span class="eyebrow">RATES</span>
+        <h2>প্রতি kWh-এর ভাঙান</h2>
+      </div>
+      <table class="tariff-table">
+        <thead>
+          <tr><th>আইটেম</th><th>গ্রাহক (Consumer)</th><th>উৎপাদক (Producer)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>এনার্জি রেট</td><td><b>৳ ১১.০০</b> /kWh</td><td><b>৳ ৯.০০</b> /kWh পেমেন্ট</td></tr>
+          <tr><td>অন্যান্য খরচ (network, fees)</td><td>৳ ১.০০ /kWh</td><td>—</td></tr>
+          <tr><td>লুকানো মার্জিন</td><td>নেই</td><td>নেই</td></tr>
+          <tr><td>সেটেলমেন্ট ফ্রিকোয়েন্সি</td><td>মাসিক স্টেটমেন্ট</td><td>মাসিক স্টেটমেন্ট</td></tr>
+        </tbody>
+      </table>
+      <p class="note">
+        Consumer-এর পুরো বিল শুধু settled energy-র ওপর নির্ভর করে না; বাকি grid
+        consumption-এর জন্য আলাদা billing হতে পারে। বাস্তব লেনদেনের আগে অনুমোদিত
+        payment ও settlement arrangement প্রয়োজন।
+      </p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container narrow">
+      <div class="block-head">
+        <span class="eyebrow">EXAMPLE</span>
+        <h2>নিজে হিসাব করুন</h2>
+        <p>প্রোজেক্ট ডকের সেটেলমেন্ট ক্যালকুলেটরের ওয়েব সংস্করণ:</p>
+      </div>
+      <div class="card">
+        <form id="calc-form" class="form-grid">
+          <label class="field"><span>সেটেল করা বিদ্যুৎ (kWh)</span><input type="number" id="calc-kwh" value="550" min="1" /></label>
+          <label class="field"><span>গ্রাহক রেট (৳/kWh)</span><input type="number" id="calc-cr" value="11" step="0.5" /></label>
+          <label class="field"><span>উৎপাদক রেট (৳/kWh)</span><input type="number" id="calc-pr" value="9" step="0.5" /></label>
+          <label class="field"><span>অন্যান্য খরচ (৳/kWh)</span><input type="number" id="calc-oc" value="1" step="0.25" /></label>
+        </form>
+        <div style="margin-top:18px" id="calc-out"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="cols">
+        <div class="footer-brand">
+          <img src="../assets/img/logo-white.svg" alt="SolarShare BD" />
+          <p>SolarShare BD — বাংলাদেশের কমিউনিটি সোলার ট্রেডিং নেটওয়ার্ক (prototype)।</p>
+        </div>
+        <div><h4>Energy</h4>
+          <a href="index.html">Tariffs</a>
+          <a href="../how-it-works/index.html">How it works</a>
+          <a href="../faq/index.html">FAQ</a>
+        </div>
+        <div><h4>Direct</h4>
+          <a href="../app/index.html">App</a>
+          <a href="../contact/index.html">Contact</a>
+        </div>
+        <div><h4>Safety</h4>
+          <a href="../faq/index.html#safety">Meter safety</a>
+          <a href="../contact/index.html">Support</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 SolarShare BD</span>
+        <span>Demo prototype — no real energy trading</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var kwh = document.getElementById("calc-kwh"),
+          cr = document.getElementById("calc-cr"),
+          pr = document.getElementById("calc-pr"),
+          oc = document.getElementById("calc-oc"),
+          out = document.getElementById("calc-out");
+      function num(el, d) { var v = parseFloat(el.value); return isNaN(v) ? d : v; }
+      function render() {
+        var k = num(kwh, 0), c = num(cr, 11), p = num(pr, 9), o = num(oc, 1);
+        var collect = k * c, pay = k * p, other = k * o, rem = collect - pay - other;
+        out.innerHTML =
+          '<table class="tariff-table"><tbody>' +
+          '<tr><td>গ্রাহক থেকে সংগ্রহ</td><td><b>৳ ' + collect.toFixed(2) + '</b></td></tr>' +
+          '<tr><td>উৎপাদককে পেমেন্ট</td><td><b>৳ ' + pay.toFixed(2) + '</b></td></tr>' +
+          '<tr><td>অন্যান্য খরচ</td><td><b>৳ ' + other.toFixed(2) + '</b></td></tr>' +
+          '<tr><td><b>বাকি পরিমাণ</b></td><td><b style="color:#12795f">৳ ' + rem.toFixed(2) + '</b></td></tr>' +
+          '</tbody></table>' +
+          '<p class="note">বাকি পরিমাণ positive হলেই সেটি platform-এর profit নয় — utility cost, taxes, losses ও balancing charges ধরতে হবে।</p>';
+      }
+      [kwh, cr, pr, oc].forEach(function (el) { el.addEventListener("input", render); });
+      render();
+    });
+  </script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

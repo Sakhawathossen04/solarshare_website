@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+.vercel
+server.log
+checks.py
+server.py
