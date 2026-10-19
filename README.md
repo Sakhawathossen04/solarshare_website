@@ -10,7 +10,7 @@ are original.
 
 | Page | Path | What's on it |
 |---|---|---|
-| Home | `/index.html` | Hero + live demo grid-price panel, 5-step flow, why-us cards, stats band, app split, CTA |
+| Home | `/index.html` | Hero + live demo grid-price panel, 5-step flow, why-us cards, stats band, app split, CTA. |
 | How it works | `/how-it-works/` | Full pipeline explained: ingestion → validation → matching → settlement → app |
 | App | `/app/` | Android APK (GitHub Actions) + iOS coming-soon, demo logins, feature grid |
 | Pricing | `/pricing/` | Tariff tables (consumer ৳11, producer ৳9, other ৳1) + interactive settlement calculator |
